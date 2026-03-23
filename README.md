@@ -32,12 +32,17 @@
 #### 3️⃣ 要輸入什麼指令？
 在下方的終端機中，**依序**複製貼上並執行以下兩行指令：
 
-**第一行（編譯指令，請一字不漏複製並按 Enter）：**
+**第一行（設定編譯器路徑，請複製並按 Enter）：**
+```powershell
+$env:Path = "C:\w64devkit\bin;" + $env:Path
+```
+
+**第二行（編譯指令，請一字不漏複製並按 Enter）：**
 ```bash
 gcc Dark_Chess.c -o DarkChess.exe -I include/ -L lib/ -lraylib -lopengl32 -lgdi32 -lwinmm -fexec-charset=utf-8 -finput-charset=utf-8
 ```
 
-**第二行（執行遊戲指令，請複製並按 Enter）：**
+**第三行（執行遊戲指令，請複製並按 Enter）：**
 ```bash
 .\DarkChess.exe
 ```
